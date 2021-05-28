@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id='mytext' value="lol ">
+    <button onclick="clip()">copy</button>
+    <script>
+        let text = document.getElementById('mytext');
+
+        function clip() {
+            text.select();
+            document.execCommand('copy');
+            console.log(text.value);
+            prompt("you want to write something?");
+        }
+        text.addEventListener("focus", myFocusFunction);
+        text.addEventListener('blur', myblurFunction);
+
+        function myFocusFunction() {
+            text.style.background = "yellow";
+
+        }
+
+        function myblurFunction() {
+            text.style.background = "white";
+
+        }
+    </script>
+</body>
+
+</html>

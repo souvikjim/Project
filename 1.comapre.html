@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let key, key2;
+        let person1 = {
+            name: 'souvik',
+            age: 22,
+            stream: 'cse'
+        };
+        let person2 = {
+            name: 'souvik',
+            age: 22,
+            stream: 'cse'
+        };
+        for (key in person1) {
+            console.log(person1[key]);
+
+        };
+        for (key2 in person2) {
+            console.log(person2[key2]);
+
+        };
+        if (person1[key] === person2[key2]) {
+            console.log('true');
+            document.write('true');
+        } else {
+            console.log("false");
+            document.write('false');
+        }
+    </script>
+</body>
+
+</html>
